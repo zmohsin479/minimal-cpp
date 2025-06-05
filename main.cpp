@@ -51,7 +51,7 @@ public:
 
     void celsius()
     {
-        tempFinal = (tempInit * (5 / 9)) + 32;
+        tempFinal = (tempInit * 9.0) / 5.0 + 32;
         cout << endl
              << tempInit << " degrees Celsius is " << tempFinal << " degrees Fahrenheit " << endl
              << endl;
@@ -59,7 +59,7 @@ public:
 
     void fahrenheit()
     {
-        tempFinal = (tempInit - 32) * (5 / 9);
+        tempFinal = (tempInit - 32) * (5.0 / 9.0);
         cout << endl
              << tempInit << " degrees Fahrenheit is " << tempFinal << " degrees Celsius " << endl
              << endl;
