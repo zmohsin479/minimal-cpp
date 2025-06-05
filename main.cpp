@@ -5,26 +5,35 @@ using namespace std;
 class myClass
 {
 public:
-    int x;
-    int y;
-    int sum;
-    int multiply;
+    double x;
+    double y;
+    double sum;
+    double multiply;
+    double divide;
+    double difference;
     void show()
     {
-        cout << endl << "Multiplying these two numbers gets you: " << multiply << endl;
+        cout << endl << "The sum of  " << x << " and " << y << " is : " << sum << endl;
 
-        cout << "The sum of these two numbers is is: " << sum << endl << endl;
+        cout << "The difference between " << x << " and " << y << " is : " << difference << endl;
+
+        cout  << endl << "Multiplying " << x << " and " << y << " gets you : " << multiply << endl;
+        
+        cout << "Dividing " << x << " by " << y << " gets you : " << divide << endl
+             << endl;
     }
 };
 
 int main()
 {
     myClass object;
-    cout << "Type a number: ";
+    cout << "Type your first number: ";
     cin >> object.x;
-    cout << "Type another number: ";
+    cout << "Type your second number: ";
     cin >> object.y;
     object.sum = object.x + object.y;
     object.multiply = object.x * object.y;
+    object.divide = object.x / object.y;
+    object.difference = object. x - object.y;
     object.show();
 }
