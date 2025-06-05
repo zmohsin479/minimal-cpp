@@ -13,12 +13,14 @@ public:
     double difference;
     void show()
     {
-        cout << endl << "The sum of  " << x << " and " << y << " is : " << sum << endl;
+        cout << endl
+             << "The sum of  " << x << " and " << y << " is : " << sum << endl;
 
         cout << "The difference between " << x << " and " << y << " is : " << difference << endl;
 
-        cout  << endl << "Multiplying " << x << " and " << y << " gets you : " << multiply << endl;
-        
+        cout << endl
+             << "Multiplying " << x << " and " << y << " gets you : " << multiply << endl;
+
         cout << "Dividing " << x << " by " << y << " gets you : " << divide << endl
              << endl;
     }
@@ -34,6 +36,6 @@ int main()
     object.sum = object.x + object.y;
     object.multiply = object.x * object.y;
     object.divide = object.x / object.y;
-    object.difference = object. x - object.y;
+    object.difference = object.x - object.y;
     object.show();
 }
