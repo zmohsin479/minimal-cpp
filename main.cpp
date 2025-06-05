@@ -14,14 +14,14 @@ public:
     void show()
     {
         cout << endl
-             << "The sum of  " << x << " and " << y << " is : " << sum << endl;
+             << "The sum of " << x << " and " << y << " is: " << sum << endl;
 
-        cout << "The difference between " << x << " and " << y << " is : " << difference << endl;
+        cout << "The difference between " << x << " and " << y << " is: " << difference << endl;
 
         cout << endl
-             << "Multiplying " << x << " and " << y << " gets you : " << multiply << endl;
+             << "Multiplying " << x << " and " << y << " gets you: " << multiply << endl;
 
-        cout << "Dividing " << x << " by " << y << " gets you : " << divide << endl
+        cout << "Dividing " << x << " by " << y << " gets you: " << divide << endl
              << endl;
     }
 };
