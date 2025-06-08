@@ -1,8 +1,7 @@
+#include <iostream>
 using namespace std;
 
-#include <iostream>
-
-class myClass
+class mathWeather
 {
 public:
     double tempInit;
@@ -12,10 +11,6 @@ public:
     double y;
 
     double answer;
-
-    double selection;
-    double selectionWeather;
-    double selectionMath;
 
     void add()
     {
@@ -66,20 +61,33 @@ public:
     }
 };
 
+class Fib
+{
+public:
+    int fib(int value) {
+        if (value == 0 || value == 1) {
+            return value;
+        }
+        return fib(value - 1) + fib(value - 2);
+    }
+};
+
 int main()
 {
-    myClass object;
+    mathWeather object;
 
-    cout
-        << "Do you want to convert the weather (1) or do math (2): ";
-    cin >> object.selection;
+    cout << "Weather (1), Math (2) Fibonacci Sequence (3): ";
+    int selection;
+    int selectionWeather;
+    int selectionMath;
+    cin >> selection;
 
-    if (object.selection == 1)
+    if (selection == 1)
     {
         cout << endl
              << "Do you want to convert from C to F (1) or from F to C (2): ";
-        cin >> object.selectionWeather;
-        if (object.selectionWeather == 1)
+        cin >> selectionWeather;
+        if (selectionWeather == 1)
         {
             cout << endl
                  << "Enter the weather in Celsius: ";
@@ -94,26 +102,25 @@ int main()
             object.fahrenheit();
         }
     }
-    else
+    else if (selection == 2)
     {
-        cout << endl
-             << "Type your first number: ";
+        cout << endl << "Type your first number: ";
         cin >> object.x;
         cout << "Type your second number: ";
         cin >> object.y;
 
         cout << endl
              << "Do you want to add these numbers (1), subtract these numbers (2), multiply these numbers (3) or divide these numbers (4): ";
-        cin >> object.selectionMath;
-        if (object.selectionMath == 1)
+        cin >> selectionMath;
+        if (selectionMath == 1)
         {
             object.add();
         }
-        else if (object.selectionMath == 2)
+        else if (selectionMath == 2)
         {
             object.subtract();
         }
-        else if (object.selectionMath == 3)
+        else if (selectionMath == 3)
         {
             object.multiply();
         }
@@ -121,5 +128,12 @@ int main()
         {
             object.divide();
         }
+    }
+    else {
+        Fib fibonacci;
+        cout << "Choose the n-th value of the Fibonacci Sequence you want: ";
+        int value;
+        cin >> value;
+        cout << fibonacci.fib(value) << endl;
     }
 }
